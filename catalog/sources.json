@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "allowed_hosts": [
+    "www.energa.pl"
+  ],
+  "sources": [
+    {
+      "id": "energa-obrot-taryfa-g-2026",
+      "url": "https://www.energa.pl/dam/jcr:1f730159-7aab-4815-8a17-e0f6f0a6a223/Taryfa%20ENERGA-OBR%C3%93T%20S.A.%20dla%20energii%20elektrycznej%20obowi%C4%85zuj%C4%85ca%20od%201.01.pdf",
+      "sha256": "cc7c39ef79c5177d4f1c9db2e9e2afdb0c4cbfa751aba7fefb5a0d455ce4e25e",
+      "size": 166230,
+      "media_type": "application/pdf",
+      "verified_at": "2026-09-13T19:04:48Z",
+      "covers": [
+        "energa-obrot.taryfa-ure-2026.g11:1"
+      ]
+    }
+  ]
+}
+

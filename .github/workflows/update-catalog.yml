@@ -1,0 +1,68 @@
+name: Verify and publish tariff catalog
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tariff-catalog-publication
+  cancel-in-progress: false
+
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Check out exact default-branch state
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Run contract tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Verify pinned official sources
+        run: python3 tools/check_sources.py --write-status
+
+      - name: Build immutable object and manifest
+        run: python3 tools/build_catalog.py
+
+      - name: Validate complete publication
+        run: |
+          python3 tools/validate_catalog.py
+          git diff --check
+
+      - name: Publish new immutable objects first
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "migiels-catalog-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet -- objects/; then
+            git add objects/
+            git commit -m "data: publish immutable tariff object"
+            git push origin HEAD:main
+          fi
+
+      - name: Publish manifest and source-check status
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add manifest.json status.json
+          if git diff --cached --quiet; then
+            echo "Sources verified; repository state already current."
+            exit 0
+          fi
+          if git diff --cached --quiet -- manifest.json; then
+            git commit -m "chore: record successful official-source check"
+          else
+            git commit -m "data: publish verified tariff manifest"
+          fi
+          git push origin HEAD:main
+

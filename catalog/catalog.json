@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "data_version": "2026.09.13.1",
+  "records": [
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "energa-operator"
+      ],
+      "seller": {
+        "id": "energa-obrot",
+        "name": "ENERGA-OBRÓT S.A."
+      },
+      "brand": {
+        "id": "energa",
+        "name": "Energa",
+        "aliases": [
+          "ENERGA-OBRÓT"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G od 1 stycznia 2026 r."
+      },
+      "price_list": {
+        "id": "energa-obrot.taryfa-ure-2026.g11",
+        "revision": 1
+      },
+      "tariff_group": "G11",
+      "schedule": {
+        "profile_id": "energa-operator.g11.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "calodobowa",
+        "rules": []
+      },
+      "zones": [
+        {
+          "id": "calodobowa",
+          "label": "Całodobowa",
+          "price": "0.6172",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T19:04:48Z",
+      "verified_at": "2026-09-13T19:04:48Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": null,
+      "source_documents": [
+        "https://www.energa.pl/dam/jcr:1f730159-7aab-4815-8a17-e0f6f0a6a223/Taryfa%20ENERGA-OBR%C3%93T%20S.A.%20dla%20energii%20elektrycznej%20obowi%C4%85zuj%C4%85ca%20od%201.01.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G11 ENERGA-OBRÓT S.A., odbiorcy taryfowi przyłączeni do ENERGA-OPERATOR S.A.; bez dystrybucji i opłat dodatkowych."
+    }
+  ]
+}
+
