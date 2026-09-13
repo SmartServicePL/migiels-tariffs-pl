@@ -1,0 +1,14 @@
+{
+  "catalog_data_version": "2026.09.13.1",
+  "data_changed": false,
+  "last_successful_check_at": "2026-09-13T19:10:52Z",
+  "schema_version": 1,
+  "source_check_result": "verified_unchanged",
+  "sources": [
+    {
+      "id": "energa-obrot-taryfa-g-2026",
+      "sha256": "cc7c39ef79c5177d4f1c9db2e9e2afdb0c4cbfa751aba7fefb5a0d455ce4e25e",
+      "status": "verified"
+    }
+  ]
+}
