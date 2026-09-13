@@ -40,7 +40,7 @@ def build(*, check: bool) -> None:
     relative_path = f"objects/catalog-{checksum}.json"
     object_path = ROOT / relative_path
     manifest = {
-        "schema_version": 1,
+        "schema_version": catalog["schema_version"],
         "data_version": catalog["data_version"],
         "published_at": publication["published_at"],
         "objects": [

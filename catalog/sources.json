@@ -1,7 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "allowed_hosts": [
-    "www.energa.pl"
+    "bip.ure.gov.pl",
+    "www.energa.pl",
+    "eon.pl"
   ],
   "sources": [
     {
@@ -10,11 +12,130 @@
       "sha256": "cc7c39ef79c5177d4f1c9db2e9e2afdb0c4cbfa751aba7fefb5a0d455ce4e25e",
       "size": 166230,
       "media_type": "application/pdf",
-      "verified_at": "2026-09-13T19:04:48Z",
+      "verified_at": "2026-09-13T21:00:00Z",
       "covers": [
         "energa-obrot.taryfa-ure-2026.g11:1"
+      ]
+    },
+    {
+      "id": "energa-obrot-ure-2026",
+      "url": "https://bip.ure.gov.pl/download/3/20346/ENERGAOBROT.pdf",
+      "sha256": "29d9bb6d251f1b94d74b684e210db290784f6053a14cc6db6d3413b8d8fd3efe",
+      "size": 2089103,
+      "media_type": "application/pdf",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "covers": [
+        "energa-obrot.taryfa-ure-2026.g12:1",
+        "energa-obrot.taryfa-ure-2026.g12w:1",
+        "energa-obrot.taryfa-ure-2026.g12r:1"
+      ]
+    },
+    {
+      "id": "energa-operator-2026",
+      "url": "https://bip.ure.gov.pl/download/3/20347/EnergaOperator.pdf",
+      "sha256": "79519aed87ddd959c85603b271b808190bff24043e09518aa37a8088177f6a72",
+      "size": 13621807,
+      "media_type": "application/pdf",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "covers": [
+        "energa-obrot.taryfa-ure-2026.g12:1",
+        "energa-obrot.taryfa-ure-2026.g12w:1",
+        "energa-obrot.taryfa-ure-2026.g12r:1"
+      ]
+    },
+    {
+      "id": "pge-obrot-ure-2026",
+      "url": "https://bip.ure.gov.pl/download/3/20342/PGEObrot.pdf",
+      "sha256": "77f265897f725b645f82f58ee527768242aaa7c1a258d106e5c10dc36abef421",
+      "size": 3609993,
+      "media_type": "application/pdf",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "covers": [
+        "pge-obrot.taryfa-ure-2026.g11:1",
+        "pge-obrot.taryfa-ure-2026.g12:1",
+        "pge-obrot.taryfa-ure-2026.g12w:1",
+        "pge-obrot.taryfa-ure-2026.g12n:1"
+      ]
+    },
+    {
+      "id": "pge-dystrybucja-2026",
+      "url": "https://bip.ure.gov.pl/download/3/20345/PGEDystrybucja.pdf",
+      "sha256": "c36e0c846c5885567ddf088d01b12df60a7bbed362b00e7bca6502de083d1edb",
+      "size": 2284809,
+      "media_type": "application/pdf",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "covers": [
+        "pge-obrot.taryfa-ure-2026.g11:1",
+        "pge-obrot.taryfa-ure-2026.g12:1",
+        "pge-obrot.taryfa-ure-2026.g12w:1",
+        "pge-obrot.taryfa-ure-2026.g12n:1"
+      ]
+    },
+    {
+      "id": "tauron-sprzedaz-ure-2026",
+      "url": "https://bip.ure.gov.pl/download/3/20340/TauronSprzedaz.pdf",
+      "sha256": "0b5bf186a413aefdbeca78843399d0ddfef9d214944cfd20f8f9fb201a345b99",
+      "size": 2178095,
+      "media_type": "application/pdf",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "covers": [
+        "tauron-sprzedaz.taryfa-ure-2026.g11:1",
+        "tauron-sprzedaz.taryfa-ure-2026.g12:1",
+        "tauron-sprzedaz.taryfa-ure-2026.g12w:1",
+        "tauron-sprzedaz.taryfa-ure-2026.g13:1"
+      ]
+    },
+    {
+      "id": "tauron-dystrybucja-2026",
+      "url": "https://bip.ure.gov.pl/download/3/20344/TauronDystrybucja.pdf",
+      "sha256": "f0a395083dec633e955e73e05a1af0f36aaa45b3ea543b7ce3e0f8e75e73fb65",
+      "size": 2206179,
+      "media_type": "application/pdf",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "covers": [
+        "tauron-sprzedaz.taryfa-ure-2026.g11:1",
+        "tauron-sprzedaz.taryfa-ure-2026.g12:1",
+        "tauron-sprzedaz.taryfa-ure-2026.g12w:1",
+        "tauron-sprzedaz.taryfa-ure-2026.g13:1"
+      ]
+    },
+    {
+      "id": "enea-ure-2026",
+      "url": "https://bip.ure.gov.pl/download/3/20341/Enea.pdf",
+      "sha256": "dabebdaae5454c9b5cb721100ef2d681a7ec98fe4ea2848f997489f4e3300c72",
+      "size": 4354646,
+      "media_type": "application/pdf",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "covers": [
+        "enea.taryfa-ure-2026.g11:1",
+        "enea.taryfa-ure-2026.g12w:1"
+      ]
+    },
+    {
+      "id": "enea-operator-2026",
+      "url": "https://bip.ure.gov.pl/download/3/20348/ENEAOperator.pdf",
+      "sha256": "df512101d76a3d52f9d9f66d42e0e2c791e40f402c10c644ae35d6c9e3a24238",
+      "size": 2305726,
+      "media_type": "application/pdf",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "covers": [
+        "enea.taryfa-ure-2026.g11:1",
+        "enea.taryfa-ure-2026.g12w:1"
+      ]
+    },
+    {
+      "id": "eon-polska-taryfa-g-2026",
+      "url": "https://eon.pl/-/media/eon/dokumenty/dla-domu/taryfa-energii-elektrycznej-eon-polska-sa-dla-grup-taryfowych-g--obowizuje-od-dnia-01_01_2026.ashx",
+      "sha256": "8a82d929f646443c81c93d92481d2e6c429ac2bbbba031683e9b316121335247",
+      "size": 112255,
+      "media_type": "application/pdf",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "covers": [
+        "eon-polska.taryfa-sprzedawcy-2026.g11:1",
+        "eon-polska.taryfa-sprzedawcy-2026.g12:1",
+        "eon-polska.taryfa-sprzedawcy-2026.g12w:1",
+        "eon-polska.taryfa-sprzedawcy-2026.g12as:1"
       ]
     }
   ]
 }
-

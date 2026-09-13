@@ -27,15 +27,42 @@ class CatalogContractTests(unittest.TestCase):
     def test_published_catalog_and_manifest_are_valid(self) -> None:
         validate_catalog(self.catalog)
         manifest = validate_manifest(ROOT)
-        self.assertEqual(manifest["data_version"], "2026.09.13.1")
+        self.assertEqual(manifest["data_version"], "2026.09.13.5")
+        self.assertEqual(manifest["schema_version"], 2)
+        self.assertEqual(len(self.catalog["records"]), 18)
         record = self.catalog["records"][0]
         self.assertEqual(record["price_list"]["id"], "energa-obrot.taryfa-ure-2026.g11")
         self.assertEqual(record["zones"][0]["price"], "0.6172")
         self.assertEqual(record["zones"][0]["tax_treatment"], "gross")
+        self.assertEqual(record["schedule"]["meter_clock_mode"], "not_applicable")
+        self.assertEqual(
+            {item["brand"]["id"] for item in self.catalog["records"]},
+            {"energa", "pge", "tauron", "enea", "eon"},
+        )
 
     def test_sources_are_official_https_and_hash_pinned(self) -> None:
         validate_sources(self.sources)
-        self.assertEqual(self.sources["allowed_hosts"], ["www.energa.pl"])
+        self.assertEqual(
+            self.sources["allowed_hosts"],
+            ["bip.ure.gov.pl", "www.energa.pl", "eon.pl"],
+        )
+
+    def test_multizone_tariffs_require_explicit_meter_clock_choice(self) -> None:
+        for record in self.catalog["records"]:
+            mode = record["schedule"]["meter_clock_mode"]
+            if len(record["zones"]) == 1:
+                self.assertEqual(mode, "not_applicable")
+            else:
+                self.assertEqual(mode, "operator_choice")
+                self.assertTrue(record["schedule"]["rules"])
+
+    def test_ambiguous_enea_g12_is_not_published(self) -> None:
+        groups = {
+            (item["brand"]["id"], item["tariff_group"])
+            for item in self.catalog["records"]
+        }
+        self.assertNotIn(("enea", "G12"), groups)
+        self.assertIn(("enea", "G12w"), groups)
 
     def test_unknown_fields_fail_closed(self) -> None:
         changed = copy.deepcopy(self.catalog)

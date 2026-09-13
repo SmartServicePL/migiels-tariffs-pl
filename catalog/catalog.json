@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "data_version": "2026.09.13.1",
+  "schema_version": 2,
+  "data_version": "2026.09.13.5",
   "records": [
     {
       "country": "PL",
@@ -32,7 +32,8 @@
         "profile_id": "energa-operator.g11.2026",
         "timezone": "Europe/Warsaw",
         "default_zone_id": "calodobowa",
-        "rules": []
+        "rules": [],
+        "meter_clock_mode": "not_applicable"
       },
       "zones": [
         {
@@ -54,7 +55,1546 @@
       ],
       "verification_state": "verified_official",
       "declared_coverage": "Cena brutto energii czynnej dla G11 ENERGA-OBRÓT S.A., odbiorcy taryfowi przyłączeni do ENERGA-OPERATOR S.A.; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "energa-operator"
+      ],
+      "seller": {
+        "id": "energa-obrot",
+        "name": "ENERGA-OBRÓT S.A."
+      },
+      "brand": {
+        "id": "energa",
+        "name": "Energa",
+        "aliases": [
+          "ENERGA-OBRÓT"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G od 1 stycznia 2026 r."
+      },
+      "price_list": {
+        "id": "energa-obrot.taryfa-ure-2026.g12",
+        "revision": 1
+      },
+      "tariff_group": "G12",
+      "schedule": {
+        "profile_id": "energa-operator.g12.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "13:00",
+            "end_local": "15:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.7182",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna",
+          "price": "0.4678",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20346/ENERGAOBROT.pdf",
+        "https://bip.ure.gov.pl/download/3/20347/EnergaOperator.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12 ENERGA-OBRÓT S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do energa-operator; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "energa-operator"
+      ],
+      "seller": {
+        "id": "energa-obrot",
+        "name": "ENERGA-OBRÓT S.A."
+      },
+      "brand": {
+        "id": "energa",
+        "name": "Energa",
+        "aliases": [
+          "ENERGA-OBRÓT"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G od 1 stycznia 2026 r."
+      },
+      "price_list": {
+        "id": "energa-obrot.taryfa-ure-2026.g12w",
+        "revision": 1
+      },
+      "tariff_group": "G12w",
+      "schedule": {
+        "profile_id": "energa-operator.g12w.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "13:00",
+            "end_local": "15:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": [
+              5,
+              6
+            ],
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 20
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": null,
+            "holiday": true,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 30
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.7512",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna i weekend",
+          "price": "0.4908",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20346/ENERGAOBROT.pdf",
+        "https://bip.ure.gov.pl/download/3/20347/EnergaOperator.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12w ENERGA-OBRÓT S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do energa-operator; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "energa-operator"
+      ],
+      "seller": {
+        "id": "energa-obrot",
+        "name": "ENERGA-OBRÓT S.A."
+      },
+      "brand": {
+        "id": "energa",
+        "name": "Energa",
+        "aliases": [
+          "ENERGA-OBRÓT"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G od 1 stycznia 2026 r."
+      },
+      "price_list": {
+        "id": "energa-obrot.taryfa-ure-2026.g12r",
+        "revision": 1
+      },
+      "tariff_group": "G12r",
+      "schedule": {
+        "profile_id": "energa-operator.g12r.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "szczytowa",
+        "rules": [
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "13:00",
+            "end_local": "16:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "22:00",
+            "end_local": "07:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "szczytowa",
+          "label": "Szczytowa",
+          "price": "0.8262",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "pozaszczytowa",
+          "label": "Pozaszczytowa",
+          "price": "0.3772",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20346/ENERGAOBROT.pdf",
+        "https://bip.ure.gov.pl/download/3/20347/EnergaOperator.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12r ENERGA-OBRÓT S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do energa-operator; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "pge-dystrybucja"
+      ],
+      "seller": {
+        "id": "pge-obrot",
+        "name": "PGE Obrót S.A."
+      },
+      "brand": {
+        "id": "pge",
+        "name": "PGE",
+        "aliases": [
+          "PGE Obrót"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G na 2026 r."
+      },
+      "price_list": {
+        "id": "pge-obrot.taryfa-ure-2026.g11",
+        "revision": 1
+      },
+      "tariff_group": "G11",
+      "schedule": {
+        "profile_id": "pge-dystrybucja.g11.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "calodobowa",
+        "rules": [],
+        "meter_clock_mode": "not_applicable"
+      },
+      "zones": [
+        {
+          "id": "calodobowa",
+          "label": "Całodobowa",
+          "price": "0.6189",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20342/PGEObrot.pdf",
+        "https://bip.ure.gov.pl/download/3/20345/PGEDystrybucja.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G11 PGE Obrót S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do pge-dystrybucja; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "pge-dystrybucja"
+      ],
+      "seller": {
+        "id": "pge-obrot",
+        "name": "PGE Obrót S.A."
+      },
+      "brand": {
+        "id": "pge",
+        "name": "PGE",
+        "aliases": [
+          "PGE Obrót"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G na 2026 r."
+      },
+      "price_list": {
+        "id": "pge-obrot.taryfa-ure-2026.g12",
+        "revision": 1
+      },
+      "tariff_group": "G12",
+      "schedule": {
+        "profile_id": "pge-dystrybucja.g12.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "15:00",
+            "end_local": "17:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": [
+              4,
+              1
+            ],
+            "season_end": [
+              9,
+              30
+            ],
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "13:00",
+            "end_local": "15:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": [
+              10,
+              1
+            ],
+            "season_end": [
+              3,
+              31
+            ],
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.7018",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna",
+          "price": "0.4635",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20342/PGEObrot.pdf",
+        "https://bip.ure.gov.pl/download/3/20345/PGEDystrybucja.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12 PGE Obrót S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do pge-dystrybucja; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "pge-dystrybucja"
+      ],
+      "seller": {
+        "id": "pge-obrot",
+        "name": "PGE Obrót S.A."
+      },
+      "brand": {
+        "id": "pge",
+        "name": "PGE",
+        "aliases": [
+          "PGE Obrót"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G na 2026 r."
+      },
+      "price_list": {
+        "id": "pge-obrot.taryfa-ure-2026.g12w",
+        "revision": 1
+      },
+      "tariff_group": "G12w",
+      "schedule": {
+        "profile_id": "pge-dystrybucja.g12w.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "15:00",
+            "end_local": "17:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": [
+              4,
+              1
+            ],
+            "season_end": [
+              9,
+              30
+            ],
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "13:00",
+            "end_local": "15:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": [
+              10,
+              1
+            ],
+            "season_end": [
+              3,
+              31
+            ],
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": [
+              5,
+              6
+            ],
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 20
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": null,
+            "holiday": true,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 30
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.7221",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna i weekend",
+          "price": "0.5271",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20342/PGEObrot.pdf",
+        "https://bip.ure.gov.pl/download/3/20345/PGEDystrybucja.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12w PGE Obrót S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do pge-dystrybucja; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "pge-dystrybucja"
+      ],
+      "seller": {
+        "id": "pge-obrot",
+        "name": "PGE Obrót S.A."
+      },
+      "brand": {
+        "id": "pge",
+        "name": "PGE",
+        "aliases": [
+          "PGE Obrót"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G na 2026 r."
+      },
+      "price_list": {
+        "id": "pge-obrot.taryfa-ure-2026.g12n",
+        "revision": 1
+      },
+      "tariff_group": "G12n",
+      "schedule": {
+        "profile_id": "pge-dystrybucja.g12n.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "01:00",
+            "end_local": "05:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": [
+              6
+            ],
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 20
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": null,
+            "holiday": true,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 30
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.6840",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna, niedziele i święta",
+          "price": "0.4873",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20342/PGEObrot.pdf",
+        "https://bip.ure.gov.pl/download/3/20345/PGEDystrybucja.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12n PGE Obrót S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do pge-dystrybucja; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "tauron-dystrybucja"
+      ],
+      "seller": {
+        "id": "tauron-sprzedaz",
+        "name": "TAURON Sprzedaż Sp. z o.o."
+      },
+      "brand": {
+        "id": "tauron",
+        "name": "TAURON",
+        "aliases": [
+          "TAURON Sprzedaż"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G na 2026 r."
+      },
+      "price_list": {
+        "id": "tauron-sprzedaz.taryfa-ure-2026.g11",
+        "revision": 1
+      },
+      "tariff_group": "G11",
+      "schedule": {
+        "profile_id": "tauron-dystrybucja.g11.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "calodobowa",
+        "rules": [],
+        "meter_clock_mode": "not_applicable"
+      },
+      "zones": [
+        {
+          "id": "calodobowa",
+          "label": "Całodobowa",
+          "price": "0.6175",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20340/TauronSprzedaz.pdf",
+        "https://bip.ure.gov.pl/download/3/20344/TauronDystrybucja.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G11 TAURON Sprzedaż Sp. z o.o., odbiorcy rozliczani według tej taryfy i przyłączeni do tauron-dystrybucja; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "tauron-dystrybucja"
+      ],
+      "seller": {
+        "id": "tauron-sprzedaz",
+        "name": "TAURON Sprzedaż Sp. z o.o."
+      },
+      "brand": {
+        "id": "tauron",
+        "name": "TAURON",
+        "aliases": [
+          "TAURON Sprzedaż"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G na 2026 r."
+      },
+      "price_list": {
+        "id": "tauron-sprzedaz.taryfa-ure-2026.g12",
+        "revision": 1
+      },
+      "tariff_group": "G12",
+      "schedule": {
+        "profile_id": "tauron-dystrybucja.g12.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "13:00",
+            "end_local": "15:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.6740",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna",
+          "price": "0.5141",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20340/TauronSprzedaz.pdf",
+        "https://bip.ure.gov.pl/download/3/20344/TauronDystrybucja.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12 TAURON Sprzedaż Sp. z o.o., odbiorcy rozliczani według tej taryfy i przyłączeni do tauron-dystrybucja; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "tauron-dystrybucja"
+      ],
+      "seller": {
+        "id": "tauron-sprzedaz",
+        "name": "TAURON Sprzedaż Sp. z o.o."
+      },
+      "brand": {
+        "id": "tauron",
+        "name": "TAURON",
+        "aliases": [
+          "TAURON Sprzedaż"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G na 2026 r."
+      },
+      "price_list": {
+        "id": "tauron-sprzedaz.taryfa-ure-2026.g12w",
+        "revision": 1
+      },
+      "tariff_group": "G12w",
+      "schedule": {
+        "profile_id": "tauron-dystrybucja.g12w.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "szczytowa",
+        "rules": [
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "13:00",
+            "end_local": "15:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": [
+              5,
+              6
+            ],
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 20
+          },
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": null,
+            "holiday": true,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 30
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "szczytowa",
+          "label": "Szczytowa",
+          "price": "0.7712",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "pozaszczytowa",
+          "label": "Pozaszczytowa i weekend",
+          "price": "0.5141",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20340/TauronSprzedaz.pdf",
+        "https://bip.ure.gov.pl/download/3/20344/TauronDystrybucja.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12w TAURON Sprzedaż Sp. z o.o., odbiorcy rozliczani według tej taryfy i przyłączeni do tauron-dystrybucja; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "tauron-dystrybucja"
+      ],
+      "seller": {
+        "id": "tauron-sprzedaz",
+        "name": "TAURON Sprzedaż Sp. z o.o."
+      },
+      "brand": {
+        "id": "tauron",
+        "name": "TAURON",
+        "aliases": [
+          "TAURON Sprzedaż"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G na 2026 r."
+      },
+      "price_list": {
+        "id": "tauron-sprzedaz.taryfa-ure-2026.g13",
+        "revision": 1
+      },
+      "tariff_group": "G13",
+      "schedule": {
+        "profile_id": "tauron-dystrybucja.g13.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "pozostale",
+        "rules": [
+          {
+            "zone_id": "szczyt_rano",
+            "start_local": "07:00",
+            "end_local": "13:00",
+            "weekdays": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "holiday": false,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "szczyt_popoludnie",
+            "start_local": "19:00",
+            "end_local": "22:00",
+            "weekdays": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "holiday": false,
+            "season_start": [
+              4,
+              1
+            ],
+            "season_end": [
+              9,
+              30
+            ],
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "szczyt_popoludnie",
+            "start_local": "16:00",
+            "end_local": "21:00",
+            "weekdays": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "holiday": false,
+            "season_start": [
+              10,
+              1
+            ],
+            "season_end": [
+              3,
+              31
+            ],
+            "dates": null,
+            "priority": 10
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "szczyt_rano",
+          "label": "Szczyt przedpołudniowy",
+          "price": "0.5803",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "szczyt_popoludnie",
+          "label": "Szczyt popołudniowy",
+          "price": "0.9631",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "pozostale",
+          "label": "Pozostałe godziny",
+          "price": "0.5240",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20340/TauronSprzedaz.pdf",
+        "https://bip.ure.gov.pl/download/3/20344/TauronDystrybucja.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G13 TAURON Sprzedaż Sp. z o.o., odbiorcy rozliczani według tej taryfy i przyłączeni do tauron-dystrybucja; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "enea-operator"
+      ],
+      "seller": {
+        "id": "enea",
+        "name": "ENEA S.A."
+      },
+      "brand": {
+        "id": "enea",
+        "name": "ENEA",
+        "aliases": [
+          "Enea"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G na 2026 r."
+      },
+      "price_list": {
+        "id": "enea.taryfa-ure-2026.g11",
+        "revision": 1
+      },
+      "tariff_group": "G11",
+      "schedule": {
+        "profile_id": "enea-operator.g11.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "calodobowa",
+        "rules": [],
+        "meter_clock_mode": "not_applicable"
+      },
+      "zones": [
+        {
+          "id": "calodobowa",
+          "label": "Całodobowa",
+          "price": "0.6187",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20341/Enea.pdf",
+        "https://bip.ure.gov.pl/download/3/20348/ENEAOperator.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G11 ENEA S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do enea-operator; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "enea-operator"
+      ],
+      "seller": {
+        "id": "enea",
+        "name": "ENEA S.A."
+      },
+      "brand": {
+        "id": "enea",
+        "name": "ENEA",
+        "aliases": [
+          "Enea"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-ure-2026",
+        "name": "Taryfa dla odbiorców z grup G na 2026 r."
+      },
+      "price_list": {
+        "id": "enea.taryfa-ure-2026.g12w",
+        "revision": 1
+      },
+      "tariff_group": "G12w",
+      "schedule": {
+        "profile_id": "enea-operator.g12w.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "szczytowa",
+        "rules": [
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "21:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": [
+              5,
+              6
+            ],
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 20
+          },
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": null,
+            "holiday": true,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 30
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "szczytowa",
+          "label": "Szczytowa",
+          "price": "0.8079",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "pozaszczytowa",
+          "label": "Pozaszczytowa i weekend",
+          "price": "0.4323",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20341/Enea.pdf",
+        "https://bip.ure.gov.pl/download/3/20348/ENEAOperator.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12w ENEA S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do enea-operator; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "stoen-operator"
+      ],
+      "seller": {
+        "id": "eon-polska",
+        "name": "E.ON Polska S.A."
+      },
+      "brand": {
+        "id": "eon",
+        "name": "E.ON",
+        "aliases": [
+          "E.ON Polska"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-sprzedawcy-2026",
+        "name": "Taryfa dla grup G w sieci Stoen Operator od 1 stycznia 2026 r."
+      },
+      "price_list": {
+        "id": "eon-polska.taryfa-sprzedawcy-2026.g11",
+        "revision": 1
+      },
+      "tariff_group": "G11",
+      "schedule": {
+        "profile_id": "stoen-operator.g11.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "calodobowa",
+        "rules": [],
+        "meter_clock_mode": "not_applicable"
+      },
+      "zones": [
+        {
+          "id": "calodobowa",
+          "label": "Całodobowa",
+          "price": "0.6212",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-10-29T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://eon.pl/-/media/eon/dokumenty/dla-domu/taryfa-energii-elektrycznej-eon-polska-sa-dla-grup-taryfowych-g--obowizuje-od-dnia-01_01_2026.ashx"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G11 E.ON Polska S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do stoen-operator; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "stoen-operator"
+      ],
+      "seller": {
+        "id": "eon-polska",
+        "name": "E.ON Polska S.A."
+      },
+      "brand": {
+        "id": "eon",
+        "name": "E.ON",
+        "aliases": [
+          "E.ON Polska"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-sprzedawcy-2026",
+        "name": "Taryfa dla grup G w sieci Stoen Operator od 1 stycznia 2026 r."
+      },
+      "price_list": {
+        "id": "eon-polska.taryfa-sprzedawcy-2026.g12",
+        "revision": 1
+      },
+      "tariff_group": "G12",
+      "schedule": {
+        "profile_id": "stoen-operator.g12.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "13:00",
+            "end_local": "15:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.6635",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna",
+          "price": "0.5283",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-10-29T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://eon.pl/-/media/eon/dokumenty/dla-domu/taryfa-energii-elektrycznej-eon-polska-sa-dla-grup-taryfowych-g--obowizuje-od-dnia-01_01_2026.ashx"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12 E.ON Polska S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do stoen-operator; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "stoen-operator"
+      ],
+      "seller": {
+        "id": "eon-polska",
+        "name": "E.ON Polska S.A."
+      },
+      "brand": {
+        "id": "eon",
+        "name": "E.ON",
+        "aliases": [
+          "E.ON Polska"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-sprzedawcy-2026",
+        "name": "Taryfa dla grup G w sieci Stoen Operator od 1 stycznia 2026 r."
+      },
+      "price_list": {
+        "id": "eon-polska.taryfa-sprzedawcy-2026.g12w",
+        "revision": 1
+      },
+      "tariff_group": "G12w",
+      "schedule": {
+        "profile_id": "stoen-operator.g12w.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": [
+              5,
+              6
+            ],
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 20
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": null,
+            "holiday": true,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 30
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.6512",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna, weekend i święta",
+          "price": "0.5467",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-10-29T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://eon.pl/-/media/eon/dokumenty/dla-domu/taryfa-energii-elektrycznej-eon-polska-sa-dla-grup-taryfowych-g--obowizuje-od-dnia-01_01_2026.ashx"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12w E.ON Polska S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do stoen-operator; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "stoen-operator"
+      ],
+      "seller": {
+        "id": "eon-polska",
+        "name": "E.ON Polska S.A."
+      },
+      "brand": {
+        "id": "eon",
+        "name": "E.ON",
+        "aliases": [
+          "E.ON Polska"
+        ]
+      },
+      "offer": {
+        "id": "taryfa-sprzedawcy-2026",
+        "name": "Taryfa dla grup G w sieci Stoen Operator od 1 stycznia 2026 r."
+      },
+      "price_list": {
+        "id": "eon-polska.taryfa-sprzedawcy-2026.g12as",
+        "revision": 1
+      },
+      "tariff_group": "G12as",
+      "schedule": {
+        "profile_id": "stoen-operator.g12as.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.6758",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna",
+          "price": "0.5344",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-10-29T00:00:00+01:00",
+      "retrieved_at": "2026-09-13T21:00:00Z",
+      "verified_at": "2026-09-13T21:00:00Z",
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "source_documents": [
+        "https://eon.pl/-/media/eon/dokumenty/dla-domu/taryfa-energii-elektrycznej-eon-polska-sa-dla-grup-taryfowych-g--obowizuje-od-dnia-01_01_2026.ashx"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12as E.ON Polska S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do stoen-operator; bez dystrybucji i opłat dodatkowych."
     }
   ]
 }
-

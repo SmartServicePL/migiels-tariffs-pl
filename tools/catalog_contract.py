@@ -11,14 +11,13 @@ from pathlib import Path, PurePosixPath
 from typing import Any
 from urllib.parse import urlsplit
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 MAX_MANIFEST_BYTES = 512 * 1024
 MAX_OBJECT_BYTES = 8 * 1024 * 1024
 MAX_SOURCE_BYTES = 16 * 1024 * 1024
 ID_PATTERN = re.compile(r"[a-z0-9][a-z0-9._:-]{0,127}")
 HASH_PATTERN = re.compile(r"[0-9a-f]{64}")
 TIME_PATTERN = re.compile(r"(?:[01][0-9]|2[0-3]):[0-5][0-9]")
-MONTH_DAY_PATTERN = re.compile(r"(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])")
 
 
 class ContractError(RuntimeError):
@@ -244,14 +243,30 @@ def _validate_record(record: dict[str, Any], identities: set[tuple[str, int]]) -
 
 
 def _validate_schedule(schedule: dict[str, Any], zone_ids: set[str]) -> None:
-    _exact(schedule, {"profile_id", "timezone", "default_zone_id", "rules"}, "schedule")
+    _exact(
+        schedule,
+        {
+            "profile_id",
+            "timezone",
+            "default_zone_id",
+            "rules",
+            "meter_clock_mode",
+        },
+        "schedule",
+    )
     _identifier(schedule["profile_id"], "schedule profile id")
     if schedule["timezone"] != "Europe/Warsaw":
         raise ContractError("schedule timezone is unsupported")
+    meter_clock_mode = schedule["meter_clock_mode"]
+    if meter_clock_mode not in {"not_applicable", "operator_choice"}:
+        raise ContractError("schedule meter clock mode is unsupported")
     default = _identifier(schedule["default_zone_id"], "default zone id")
     if default not in zone_ids:
         raise ContractError("default zone is missing")
-    for value in _list(schedule["rules"], "schedule rules", allow_empty=True):
+    rules = _list(schedule["rules"], "schedule rules", allow_empty=True)
+    if (meter_clock_mode == "not_applicable") != (not rules):
+        raise ContractError("schedule meter clock mode does not match its rules")
+    for value in rules:
         rule = _object(value, "schedule rule")
         _exact(
             rule,
@@ -275,7 +290,11 @@ def _validate_schedule(schedule: dict[str, Any], zone_ids: set[str]) -> None:
             or TIME_PATTERN.fullmatch(_text(rule["end_local"], "rule end")) is None
         ):
             raise ContractError("schedule time is invalid")
-        weekdays = _list(rule["weekdays"], "rule weekdays", allow_empty=True)
+        weekdays = (
+            []
+            if rule["weekdays"] is None
+            else _list(rule["weekdays"], "rule weekdays", allow_empty=False)
+        )
         if any(
             isinstance(day, bool) or not isinstance(day, int) or not 0 <= day <= 6
             for day in weekdays
@@ -284,11 +303,15 @@ def _validate_schedule(schedule: dict[str, Any], zone_ids: set[str]) -> None:
         if rule["holiday"] is not None and not isinstance(rule["holiday"], bool):
             raise ContractError("schedule holiday selector is invalid")
         for field in ("season_start", "season_end"):
-            if (
-                rule[field] is not None
-                and MONTH_DAY_PATTERN.fullmatch(_text(rule[field], field)) is None
-            ):
-                raise ContractError("schedule season boundary is invalid")
+            if rule[field] is not None:
+                boundary = _list(rule[field], field, allow_empty=False)
+                if (
+                    len(boundary) != 2
+                    or any(isinstance(item, bool) or not isinstance(item, int) for item in boundary)
+                    or not 1 <= boundary[0] <= 12
+                    or not 1 <= boundary[1] <= 31
+                ):
+                    raise ContractError("schedule season boundary is invalid")
         if (rule["season_start"] is None) != (rule["season_end"] is None):
             raise ContractError("schedule season boundaries are incomplete")
         if rule["dates"] is not None:

@@ -1,13 +1,13 @@
 {
-  "data_version": "2026.09.13.1",
+  "data_version": "2026.09.13.5",
   "objects": [
     {
       "id": "poland-fixed-tariffs",
-      "path": "objects/catalog-9b7d6f0d47b842c2dc6b5d59b56340645960ca6d07d1f11bd7129b7dc790b001.json",
-      "sha256": "9b7d6f0d47b842c2dc6b5d59b56340645960ca6d07d1f11bd7129b7dc790b001",
-      "size": 1290
+      "path": "objects/catalog-d0f275c8b318d0419e39784386f996206e4b6b8b65421c4efdfe8a046a2b905c.json",
+      "sha256": "d0f275c8b318d0419e39784386f996206e4b6b8b65421c4efdfe8a046a2b905c",
+      "size": 30365
     }
   ],
-  "published_at": "2026-09-13T19:04:48Z",
-  "schema_version": 1
+  "published_at": "2026-09-13T21:00:00Z",
+  "schema_version": 2
 }
