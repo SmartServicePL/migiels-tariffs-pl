@@ -1,0 +1,13 @@
+{
+  "data_version": "2026.10.11.1",
+  "objects": [
+    {
+      "id": "poland-distribution-g",
+      "path": "objects/distribution-9b14c4ee3cd31fa339ec16ad88d46f286c233de41834194e6dd2cffdb914e748.json",
+      "sha256": "9b14c4ee3cd31fa339ec16ad88d46f286c233de41834194e6dd2cffdb914e748",
+      "size": 30904
+    }
+  ],
+  "published_at": "2026-10-11T06:50:00Z",
+  "schema_version": 1
+}

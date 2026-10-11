@@ -31,7 +31,9 @@ jobs:
         run: python3 tools/check_sources.py --write-status
 
       - name: Build immutable object and manifest
-        run: python3 tools/build_catalog.py
+        run: |
+          python3 tools/build_catalog.py
+          python3 tools/build_distribution.py
 
       - name: Validate complete publication
         run: |
@@ -44,8 +46,8 @@ jobs:
           set -euo pipefail
           git config user.name "migiels-catalog-bot"
           git config user.email "actions@users.noreply.github.com"
-          if ! git diff --quiet -- objects/; then
-            git add objects/
+          if [ -n "$(git status --porcelain -- objects/ distribution/objects/)" ]; then
+            git add objects/ distribution/objects/
             git commit -m "data: publish immutable tariff object"
             git push origin HEAD:main
           fi
@@ -54,12 +56,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add manifest.json status.json
+          git add manifest.json distribution/manifest.json status.json
           if git diff --cached --quiet; then
             echo "Sources verified; repository state already current."
             exit 0
           fi
-          if git diff --cached --quiet -- manifest.json; then
+          if git diff --cached --quiet -- manifest.json distribution/manifest.json; then
             git commit -m "chore: record successful official-source check"
           else
             git commit -m "data: publish verified tariff manifest"

@@ -45,6 +45,23 @@ profilu innego operatora.
 - [Decyzje i taryfy URE opublikowane w 2025 r.](https://bip.ure.gov.pl/bip/taryfy-i-inne-decyzje-b/energia-elektryczna/4767,Taryfy-opublikowane-w-2025-r.html)
 - [Taryfa E.ON Polska dla grup G w sieci Stoen Operator od 1 stycznia 2026 r.](https://eon.pl/-/media/eon/dokumenty/dla-domu/taryfa-energii-elektrycznej-eon-polska-sa-dla-grup-taryfowych-g--obowizuje-od-dnia-01_01_2026.ashx)
 
+## Stawki dystrybucyjne OSD (grupy G)
+
+Osobny katalog `distribution/` (własny manifest
+`distribution/manifest.json`) zawiera stawki netto usług dystrybucji
+z taryf OSD zatwierdzonych przez Prezesa URE na 2026 r. — ENERGA-OPERATOR,
+PGE Dystrybucja, TAURON Dystrybucja i ENEA Operator — dla grup G, dla których
+katalog ma ceny energii: składnik zmienny stawki sieciowej w strefach profilu
+z katalogu energii, składnik stały (układ 1- i 3-fazowy), opłatę jakościową,
+OZE, kogeneracyjną, mocową (progi rocznego zużycia) i abonamentową (okresy
+rozliczeniowe). Taryfy 2026 nie zawierają opłaty przejściowej. VAT jest podany
+jawnie (23 %), stawki pozostają netto. Każdy rekord wskazuje dokument źródłowy
+przypięty w `catalog/sources.json` i punkt taryfy. Stoen Operator nie jest
+jeszcze objęty — dla E.ON / Stoen porównanie pozostaje niedostępne.
+
+Manifest dystrybucji jest osobny, więc wersje aplikacji czytające wyłącznie
+`manifest.json` nie pobierają tego obiektu.
+
 W taryfach wielostrefowych administrator musi potwierdzić, czy licznik pracuje
 według automatycznej zmiany czasu lato/zima, czy według stałego czasu zimowego.
 Katalog przechowuje oficjalny rozkład godzin, a aplikacja rozwiązuje go dopiero
@@ -69,6 +86,7 @@ może zostać wyłączony po 60 dniach braku aktywności. Stan workflow oraz cza
 python -m unittest discover -s tests -v
 python tools/check_sources.py
 python tools/build_catalog.py --check
+python tools/build_distribution.py --check
 python tools/validate_catalog.py
 ```
 
