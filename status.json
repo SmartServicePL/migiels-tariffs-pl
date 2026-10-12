@@ -1,7 +1,7 @@
 {
   "catalog_data_version": "2026.09.13.5",
   "data_changed": false,
-  "last_successful_check_at": "2026-10-11T10:04:15Z",
+  "last_successful_check_at": "2026-10-12T06:09:15Z",
   "schema_version": 1,
   "source_check_result": "verified_unchanged",
   "sources": [
@@ -53,6 +53,11 @@
     {
       "id": "eon-polska-taryfa-g-2026",
       "sha256": "8a82d929f646443c81c93d92481d2e6c429ac2bbbba031683e9b316121335247",
+      "status": "verified"
+    },
+    {
+      "id": "stoen-operator-2026",
+      "sha256": "9bcca2088382c8e846e40ab45ce4d9d48305e884a6f36c4dc88c83fc410b0659",
       "status": "verified"
     }
   ]
