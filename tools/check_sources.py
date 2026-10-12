@@ -21,8 +21,32 @@ from catalog_contract import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-RETRIES = 3
+RETRIES = 4
 TIMEOUT_SECONDS = 20
+# bip.ure.gov.pl answers 429 when several files are fetched back to back:
+# space requests to one host and wait longer after 429/503 (Retry-After).
+HOST_SPACING_SECONDS = 5.0
+RATE_LIMIT_WAIT_SECONDS = 20
+MAX_RETRY_AFTER_SECONDS = 120
+_last_request_at: dict[str, float] = {}
+
+
+def _wait_for_host(host: str) -> None:
+    last = _last_request_at.get(host)
+    if last is not None:
+        remaining = HOST_SPACING_SECONDS - (time.monotonic() - last)
+        if remaining > 0:
+            time.sleep(remaining)
+    _last_request_at[host] = time.monotonic()
+
+
+def _retry_delay(exc: Exception, attempt: int) -> float:
+    if isinstance(exc, urllib.error.HTTPError) and exc.code in (429, 503):
+        header = exc.headers.get("Retry-After") if exc.headers else None
+        if header and header.strip().isdigit():
+            return float(min(int(header.strip()), MAX_RETRY_AFTER_SECONDS))
+        return float(RATE_LIMIT_WAIT_SECONDS * (1 << attempt))
+    return float(1 << attempt)
 
 
 class SafeRedirect(urllib.request.HTTPRedirectHandler):
@@ -50,8 +74,10 @@ def fetch(url: str, allowed_hosts: set[str]) -> tuple[bytes, str]:
     request = urllib.request.Request(
         url, headers={"User-Agent": "MIGIELS-Tariff-Catalog/1"}
     )
+    host = (urlsplit(url).hostname or "").lower()
     last_error: Exception | None = None
     for attempt in range(RETRIES):
+        _wait_for_host(host)
         try:
             with opener.open(request, timeout=TIMEOUT_SECONDS) as response:
                 final = urlsplit(response.geturl())
@@ -71,7 +97,7 @@ def fetch(url: str, allowed_hosts: set[str]) -> tuple[bytes, str]:
         except (OSError, urllib.error.URLError, ContractError) as exc:
             last_error = exc
             if attempt + 1 < RETRIES:
-                time.sleep(1 << attempt)
+                time.sleep(_retry_delay(exc, attempt))
     raise ContractError("official source could not be verified") from last_error
 
 
