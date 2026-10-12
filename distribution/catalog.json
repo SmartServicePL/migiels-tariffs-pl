@@ -1,5 +1,5 @@
 {
-  "data_version": "2026.10.11.1",
+  "data_version": "2026.10.12.1",
   "records": [
     {
       "capacity_monthly": [
@@ -1228,6 +1228,257 @@
       "vat_rate": "0.23",
       "verification_state": "verified_official",
       "verified_at": "2026-10-11T06:45:00Z"
+    },
+    {
+      "capacity_monthly": [
+        {
+          "price": "4.29",
+          "up_to_kwh": "500",
+          "upper_inclusive": false
+        },
+        {
+          "price": "10.31",
+          "up_to_kwh": "1200",
+          "upper_inclusive": true
+        },
+        {
+          "price": "17.18",
+          "up_to_kwh": "2800",
+          "upper_inclusive": true
+        },
+        {
+          "price": "24.05",
+          "up_to_kwh": null,
+          "upper_inclusive": false
+        }
+      ],
+      "cogeneration_per_kwh": "0.0030",
+      "country": "PL",
+      "currency": "PLN",
+      "declared_coverage": "Stawki netto usług dystrybucji Stoen Operator Sp. z o.o. dla grupy G11 (gospodarstwa domowe), z tabeli taryfy 2026 (pkt 7.5); opłaty OZE, kogeneracyjna i mocowa według taryfy (Informacja Prezesa URE). Taryfa 2026 nie zawiera opłaty przejściowej. Bez energii czynnej sprzedawcy.",
+      "group_change_rule": "pkt 2.1.7 taryfy: zmiana grupy taryfowej nie częściej niż raz na 12 miesięcy, a przy zmianie stawek opłat – w ciągu 60 dni od wejścia w życie nowej taryfy; warunki zmiany określa umowa.",
+      "network_fixed_monthly": {
+        "single_phase": "11.46",
+        "three_phase": "18.53"
+      },
+      "network_variable": [
+        {
+          "price": "0.2342",
+          "zone_id": "calodobowa"
+        }
+      ],
+      "osd": {
+        "id": "stoen-operator",
+        "name": "Stoen Operator Sp. z o.o."
+      },
+      "oze_per_kwh": "0.0073",
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "quality_per_kwh": "0.0331",
+      "retrieved_at": "2026-10-12T05:29:00Z",
+      "schedule_profile_id": "stoen-operator.g11.2026",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20339/StoenOperator.pdf"
+      ],
+      "source_reference": "Taryfa Stoen Operator Sp. z o.o. na 2026 r. zatwierdzona przez Prezesa URE decyzją DRE.WPR.4211.7.6.2025.AMi1 z 17 grudnia 2025 r.; Biuletyn Branżowy URE – Energia elektryczna nr 264 (4794) z 17 grudnia 2025 r.; pkt 7.5 (sieciowa, jakościowa, abonamentowa), 7.8 (OZE), 7.9 (kogeneracyjna), 7.10 (mocowa).",
+      "subscription_monthly": [
+        {
+          "label": "okres 1-miesięczny",
+          "period": "1m",
+          "price": "2.88"
+        },
+        {
+          "label": "okres 6-miesięczny",
+          "period": "6m",
+          "price": "0.48"
+        },
+        {
+          "label": "okres 12-miesięczny",
+          "period": "12m",
+          "price": "0.24"
+        }
+      ],
+      "tariff": {
+        "id": "stoen-operator.taryfa-dystrybucyjna-2026",
+        "revision": 1
+      },
+      "tariff_group": "G11",
+      "tax_treatment": "net",
+      "transition_monthly": [],
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "vat_rate": "0.23",
+      "verification_state": "verified_official",
+      "verified_at": "2026-10-12T05:45:00Z"
+    },
+    {
+      "capacity_monthly": [
+        {
+          "price": "4.29",
+          "up_to_kwh": "500",
+          "upper_inclusive": false
+        },
+        {
+          "price": "10.31",
+          "up_to_kwh": "1200",
+          "upper_inclusive": true
+        },
+        {
+          "price": "17.18",
+          "up_to_kwh": "2800",
+          "upper_inclusive": true
+        },
+        {
+          "price": "24.05",
+          "up_to_kwh": null,
+          "upper_inclusive": false
+        }
+      ],
+      "cogeneration_per_kwh": "0.0030",
+      "country": "PL",
+      "currency": "PLN",
+      "declared_coverage": "Stawki netto usług dystrybucji Stoen Operator Sp. z o.o. dla grupy G12 (gospodarstwa domowe), z tabeli taryfy 2026 (pkt 7.5); opłaty OZE, kogeneracyjna i mocowa według taryfy (Informacja Prezesa URE). Taryfa 2026 nie zawiera opłaty przejściowej. Bez energii czynnej sprzedawcy.",
+      "group_change_rule": "pkt 2.1.7 taryfy: zmiana grupy taryfowej nie częściej niż raz na 12 miesięcy, a przy zmianie stawek opłat – w ciągu 60 dni od wejścia w życie nowej taryfy; warunki zmiany określa umowa.",
+      "network_fixed_monthly": {
+        "single_phase": "11.46",
+        "three_phase": "18.53"
+      },
+      "network_variable": [
+        {
+          "price": "0.2545",
+          "zone_id": "dzienna"
+        },
+        {
+          "price": "0.0555",
+          "zone_id": "nocna"
+        }
+      ],
+      "osd": {
+        "id": "stoen-operator",
+        "name": "Stoen Operator Sp. z o.o."
+      },
+      "oze_per_kwh": "0.0073",
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "quality_per_kwh": "0.0331",
+      "retrieved_at": "2026-10-12T05:29:00Z",
+      "schedule_profile_id": "stoen-operator.g12.2026",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20339/StoenOperator.pdf"
+      ],
+      "source_reference": "Taryfa Stoen Operator Sp. z o.o. na 2026 r. zatwierdzona przez Prezesa URE decyzją DRE.WPR.4211.7.6.2025.AMi1 z 17 grudnia 2025 r.; Biuletyn Branżowy URE – Energia elektryczna nr 264 (4794) z 17 grudnia 2025 r.; pkt 7.5 (sieciowa, jakościowa, abonamentowa), 7.8 (OZE), 7.9 (kogeneracyjna), 7.10 (mocowa); strefy pkt 2.2.5.",
+      "subscription_monthly": [
+        {
+          "label": "okres 1-miesięczny",
+          "period": "1m",
+          "price": "2.88"
+        },
+        {
+          "label": "okres 6-miesięczny",
+          "period": "6m",
+          "price": "0.48"
+        },
+        {
+          "label": "okres 12-miesięczny",
+          "period": "12m",
+          "price": "0.24"
+        }
+      ],
+      "tariff": {
+        "id": "stoen-operator.taryfa-dystrybucyjna-2026",
+        "revision": 1
+      },
+      "tariff_group": "G12",
+      "tax_treatment": "net",
+      "transition_monthly": [],
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "vat_rate": "0.23",
+      "verification_state": "verified_official",
+      "verified_at": "2026-10-12T05:45:00Z"
+    },
+    {
+      "capacity_monthly": [
+        {
+          "price": "4.29",
+          "up_to_kwh": "500",
+          "upper_inclusive": false
+        },
+        {
+          "price": "10.31",
+          "up_to_kwh": "1200",
+          "upper_inclusive": true
+        },
+        {
+          "price": "17.18",
+          "up_to_kwh": "2800",
+          "upper_inclusive": true
+        },
+        {
+          "price": "24.05",
+          "up_to_kwh": null,
+          "upper_inclusive": false
+        }
+      ],
+      "cogeneration_per_kwh": "0.0030",
+      "country": "PL",
+      "currency": "PLN",
+      "declared_coverage": "Stawki netto usług dystrybucji Stoen Operator Sp. z o.o. dla grupy G12w (gospodarstwa domowe), z tabeli taryfy 2026 (pkt 7.5); opłaty OZE, kogeneracyjna i mocowa według taryfy (Informacja Prezesa URE). Taryfa 2026 nie zawiera opłaty przejściowej. Bez energii czynnej sprzedawcy.",
+      "group_change_rule": "pkt 2.1.7 taryfy: zmiana grupy taryfowej nie częściej niż raz na 12 miesięcy, a przy zmianie stawek opłat – w ciągu 60 dni od wejścia w życie nowej taryfy; warunki zmiany określa umowa.",
+      "network_fixed_monthly": {
+        "single_phase": "11.46",
+        "three_phase": "18.53"
+      },
+      "network_variable": [
+        {
+          "price": "0.2570",
+          "zone_id": "dzienna"
+        },
+        {
+          "price": "0.1079",
+          "zone_id": "nocna"
+        }
+      ],
+      "osd": {
+        "id": "stoen-operator",
+        "name": "Stoen Operator Sp. z o.o."
+      },
+      "oze_per_kwh": "0.0073",
+      "published_at": "2025-12-17T00:00:00+01:00",
+      "quality_per_kwh": "0.0331",
+      "retrieved_at": "2026-10-12T05:29:00Z",
+      "schedule_profile_id": "stoen-operator.g12w.2026",
+      "source_documents": [
+        "https://bip.ure.gov.pl/download/3/20339/StoenOperator.pdf"
+      ],
+      "source_reference": "Taryfa Stoen Operator Sp. z o.o. na 2026 r. zatwierdzona przez Prezesa URE decyzją DRE.WPR.4211.7.6.2025.AMi1 z 17 grudnia 2025 r.; Biuletyn Branżowy URE – Energia elektryczna nr 264 (4794) z 17 grudnia 2025 r.; pkt 7.5 (sieciowa, jakościowa, abonamentowa), 7.8 (OZE), 7.9 (kogeneracyjna), 7.10 (mocowa); strefy pkt 2.2.6: strefa szczytowa taryfy (pon.–pt. 6–22) to strefa „dzienna”, a strefy pozaszczytowe (pon.–pt. 22–6, soboty, niedziele i dni ustawowo wolne) to strefa „nocna” profilu E.ON G12w — te same godziny.",
+      "subscription_monthly": [
+        {
+          "label": "okres 1-miesięczny",
+          "period": "1m",
+          "price": "2.88"
+        },
+        {
+          "label": "okres 6-miesięczny",
+          "period": "6m",
+          "price": "0.48"
+        },
+        {
+          "label": "okres 12-miesięczny",
+          "period": "12m",
+          "price": "0.24"
+        }
+      ],
+      "tariff": {
+        "id": "stoen-operator.taryfa-dystrybucyjna-2026",
+        "revision": 1
+      },
+      "tariff_group": "G12w",
+      "tax_treatment": "net",
+      "transition_monthly": [],
+      "valid_from": "2026-01-01T00:00:00+01:00",
+      "valid_until": "2027-01-01T00:00:00+01:00",
+      "vat_rate": "0.23",
+      "verification_state": "verified_official",
+      "verified_at": "2026-10-12T05:45:00Z"
     }
   ],
   "schema_version": 1

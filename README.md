@@ -50,14 +50,25 @@ profilu innego operatora.
 Osobny katalog `distribution/` (własny manifest
 `distribution/manifest.json`) zawiera stawki netto usług dystrybucji
 z taryf OSD zatwierdzonych przez Prezesa URE na 2026 r. — ENERGA-OPERATOR,
-PGE Dystrybucja, TAURON Dystrybucja i ENEA Operator — dla grup G, dla których
-katalog ma ceny energii: składnik zmienny stawki sieciowej w strefach profilu
+PGE Dystrybucja, TAURON Dystrybucja, ENEA Operator i Stoen Operator — dla grup G,
+dla których katalog ma ceny energii: składnik zmienny stawki sieciowej w strefach profilu
 z katalogu energii, składnik stały (układ 1- i 3-fazowy), opłatę jakościową,
 OZE, kogeneracyjną, mocową (progi rocznego zużycia) i abonamentową (okresy
 rozliczeniowe). Taryfy 2026 nie zawierają opłaty przejściowej. VAT jest podany
 jawnie (23 %), stawki pozostają netto. Każdy rekord wskazuje dokument źródłowy
-przypięty w `catalog/sources.json` i punkt taryfy. Stoen Operator nie jest
-jeszcze objęty — dla E.ON / Stoen porównanie pozostaje niedostępne.
+przypięty w `catalog/sources.json` i punkt taryfy.
+
+Celowo pominięte (fail-closed, bez stawek zastępczych):
+
+- G12as (E.ON / Stoen): stawka nocna OSD zależy od zużycia w tym samym
+  okresie poprzedniego roku, czego jedna stawka na strefę nie wyraża;
+- G12e (PGE Dystrybucja): taryfa OSD ją zawiera, ale taryfa PGE Obrót
+  zatwierdzona przez URE nie ma cen energii G12e, a na obszarze wskazanym przez operatora
+  (pkt 2.2.9 taryfy) godziny stref ogłasza operator na swojej stronie;
+- G13s (TAURON Dystrybucja): taryfa OSD ją zawiera, ale taryfa TAURON Sprzedaż
+  zatwierdzona przez URE nie ma cen G13s — sprzedawca oferuje ją
+  w ofertach rynkowych ze stałą opłatą handlową, której katalog energii nie
+  przechowuje.
 
 Manifest dystrybucji jest osobny, więc wersje aplikacji czytające wyłącznie
 `manifest.json` nie pobierają tego obiektu.

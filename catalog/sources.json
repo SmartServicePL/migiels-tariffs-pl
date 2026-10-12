@@ -136,6 +136,19 @@
         "eon-polska.taryfa-sprzedawcy-2026.g12w:1",
         "eon-polska.taryfa-sprzedawcy-2026.g12as:1"
       ]
+    },
+    {
+      "id": "stoen-operator-2026",
+      "url": "https://bip.ure.gov.pl/download/3/20339/StoenOperator.pdf",
+      "sha256": "9bcca2088382c8e846e40ab45ce4d9d48305e884a6f36c4dc88c83fc410b0659",
+      "size": 2299548,
+      "media_type": "application/pdf",
+      "verified_at": "2026-10-12T05:45:00Z",
+      "covers": [
+        "eon-polska.taryfa-sprzedawcy-2026.g11:1",
+        "eon-polska.taryfa-sprzedawcy-2026.g12:1",
+        "eon-polska.taryfa-sprzedawcy-2026.g12w:1"
+      ]
     }
   ]
 }
