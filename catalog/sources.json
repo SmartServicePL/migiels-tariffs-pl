@@ -40,7 +40,24 @@
       "covers": [
         "energa-obrot.taryfa-ure-2026.g12:1",
         "energa-obrot.taryfa-ure-2026.g12w:1",
-        "energa-obrot.taryfa-ure-2026.g12r:1"
+        "energa-obrot.taryfa-ure-2026.g12r:1",
+        "energa-obrot.cennik-standardowy-2026.g12:1",
+        "energa-obrot.cennik-standardowy-2026.g12w:1",
+        "energa-obrot.cennik-standardowy-2026.g12r:1"
+      ]
+    },
+    {
+      "id": "energa-obrot-cennik-standardowy-2026",
+      "url": "https://www.energa.pl/dam/jcr:9fc5ff24-474f-42c3-866d-d99a6ceb8aed/Cennik%20standardowy%20dla%20konsument%C3%B3w%20obowi%C4%85zuj%C4%85cy%20od%201%20lutego%202026%20roku.pdf",
+      "sha256": "6b40fe11f85362981593699d1f385f8c2a9e5d2016535410525257f319e3be84",
+      "size": 175712,
+      "media_type": "application/pdf",
+      "verified_at": "2026-11-18T13:11:09Z",
+      "covers": [
+        "energa-obrot.cennik-standardowy-2026.g11:1",
+        "energa-obrot.cennik-standardowy-2026.g12:1",
+        "energa-obrot.cennik-standardowy-2026.g12w:1",
+        "energa-obrot.cennik-standardowy-2026.g12r:1"
       ]
     },
     {

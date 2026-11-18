@@ -27,9 +27,9 @@ class CatalogContractTests(unittest.TestCase):
     def test_published_catalog_and_manifest_are_valid(self) -> None:
         validate_catalog(self.catalog)
         manifest = validate_manifest(ROOT)
-        self.assertEqual(manifest["data_version"], "2026.09.13.5")
+        self.assertEqual(manifest["data_version"], "2026.11.18.1")
         self.assertEqual(manifest["schema_version"], 2)
-        self.assertEqual(len(self.catalog["records"]), 18)
+        self.assertEqual(len(self.catalog["records"]), 22)
         record = self.catalog["records"][0]
         self.assertEqual(record["price_list"]["id"], "energa-obrot.taryfa-ure-2026.g11")
         self.assertEqual(record["zones"][0]["price"], "0.6172")

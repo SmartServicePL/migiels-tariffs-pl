@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "data_version": "2026.09.13.5",
+  "data_version": "2026.11.18.1",
   "records": [
     {
       "country": "PL",
@@ -338,6 +338,343 @@
       ],
       "verification_state": "verified_official",
       "declared_coverage": "Cena brutto energii czynnej dla G12r ENERGA-OBRÓT S.A., odbiorcy rozliczani według tej taryfy i przyłączeni do energa-operator; bez dystrybucji i opłat dodatkowych."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "energa-operator"
+      ],
+      "seller": {
+        "id": "energa-obrot",
+        "name": "ENERGA-OBRÓT S.A."
+      },
+      "brand": {
+        "id": "energa",
+        "name": "Energa",
+        "aliases": [
+          "ENERGA-OBRÓT"
+        ]
+      },
+      "offer": {
+        "id": "cennik-standardowy-2026",
+        "name": "Cennik standardowy dla konsumentów od 1 lutego 2026 r."
+      },
+      "price_list": {
+        "id": "energa-obrot.cennik-standardowy-2026.g11",
+        "revision": 1
+      },
+      "tariff_group": "G11",
+      "schedule": {
+        "profile_id": "energa-operator.g11.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "calodobowa",
+        "rules": [],
+        "meter_clock_mode": "not_applicable"
+      },
+      "zones": [
+        {
+          "id": "calodobowa",
+          "label": "Całodobowa",
+          "price": "0.7520",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-08T08:27:39+01:00",
+      "retrieved_at": "2026-11-18T13:11:09Z",
+      "verified_at": "2026-11-18T13:11:09Z",
+      "valid_from": "2026-02-01T00:00:00+01:00",
+      "valid_until": null,
+      "source_documents": [
+        "https://www.energa.pl/dam/jcr:9fc5ff24-474f-42c3-866d-d99a6ceb8aed/Cennik%20standardowy%20dla%20konsument%C3%B3w%20obowi%C4%85zuj%C4%85cy%20od%201%20lutego%202026%20roku.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G11 według Cennika standardowego dla konsumentów ENERGA-OBRÓT S.A. od 1 lutego 2026 r. (tabela 1, wariant 1), odbiorcy przyłączeni do ENERGA-OPERATOR S.A.; bez dystrybucji. Opłata handlowa 19,90 zł brutto za każdy rozpoczęty miesiąc (tabela 1) nie jest wliczona w cenę energii."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "energa-operator"
+      ],
+      "seller": {
+        "id": "energa-obrot",
+        "name": "ENERGA-OBRÓT S.A."
+      },
+      "brand": {
+        "id": "energa",
+        "name": "Energa",
+        "aliases": [
+          "ENERGA-OBRÓT"
+        ]
+      },
+      "offer": {
+        "id": "cennik-standardowy-2026",
+        "name": "Cennik standardowy dla konsumentów od 1 lutego 2026 r."
+      },
+      "price_list": {
+        "id": "energa-obrot.cennik-standardowy-2026.g12",
+        "revision": 1
+      },
+      "tariff_group": "G12",
+      "schedule": {
+        "profile_id": "energa-operator.g12.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "13:00",
+            "end_local": "15:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.8764",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna",
+          "price": "0.5685",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-08T08:27:39+01:00",
+      "retrieved_at": "2026-11-18T13:11:09Z",
+      "verified_at": "2026-11-18T13:11:09Z",
+      "valid_from": "2026-02-01T00:00:00+01:00",
+      "valid_until": null,
+      "source_documents": [
+        "https://www.energa.pl/dam/jcr:9fc5ff24-474f-42c3-866d-d99a6ceb8aed/Cennik%20standardowy%20dla%20konsument%C3%B3w%20obowi%C4%85zuj%C4%85cy%20od%201%20lutego%202026%20roku.pdf",
+        "https://bip.ure.gov.pl/download/3/20347/EnergaOperator.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12 według Cennika standardowego dla konsumentów ENERGA-OBRÓT S.A. od 1 lutego 2026 r. (tabela 1, wariant 2 „G12*” – jedna cena dla G12, G12w i G12r; strefa 1 – dzienna, strefa 2 – nocna), odbiorcy przyłączeni do ENERGA-OPERATOR S.A., godziny stref według taryfy tego operatora; bez dystrybucji. Opłata handlowa 19,90 zł brutto za każdy rozpoczęty miesiąc (tabela 1) nie jest wliczona w cenę energii."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "energa-operator"
+      ],
+      "seller": {
+        "id": "energa-obrot",
+        "name": "ENERGA-OBRÓT S.A."
+      },
+      "brand": {
+        "id": "energa",
+        "name": "Energa",
+        "aliases": [
+          "ENERGA-OBRÓT"
+        ]
+      },
+      "offer": {
+        "id": "cennik-standardowy-2026",
+        "name": "Cennik standardowy dla konsumentów od 1 lutego 2026 r."
+      },
+      "price_list": {
+        "id": "energa-obrot.cennik-standardowy-2026.g12w",
+        "revision": 1
+      },
+      "tariff_group": "G12w",
+      "schedule": {
+        "profile_id": "energa-operator.g12w.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "dzienna",
+        "rules": [
+          {
+            "zone_id": "nocna",
+            "start_local": "13:00",
+            "end_local": "15:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "22:00",
+            "end_local": "06:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": [
+              5,
+              6
+            ],
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 20
+          },
+          {
+            "zone_id": "nocna",
+            "start_local": "00:00",
+            "end_local": "00:00",
+            "weekdays": null,
+            "holiday": true,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 30
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "dzienna",
+          "label": "Dzienna",
+          "price": "0.8764",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "nocna",
+          "label": "Nocna i weekend",
+          "price": "0.5685",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-08T08:27:39+01:00",
+      "retrieved_at": "2026-11-18T13:11:09Z",
+      "verified_at": "2026-11-18T13:11:09Z",
+      "valid_from": "2026-02-01T00:00:00+01:00",
+      "valid_until": null,
+      "source_documents": [
+        "https://www.energa.pl/dam/jcr:9fc5ff24-474f-42c3-866d-d99a6ceb8aed/Cennik%20standardowy%20dla%20konsument%C3%B3w%20obowi%C4%85zuj%C4%85cy%20od%201%20lutego%202026%20roku.pdf",
+        "https://bip.ure.gov.pl/download/3/20347/EnergaOperator.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12w według Cennika standardowego dla konsumentów ENERGA-OBRÓT S.A. od 1 lutego 2026 r. (tabela 1, wariant 2 „G12*” – jedna cena dla G12, G12w i G12r; strefa 1 – dzienna, strefa 2 – nocna i weekend), odbiorcy przyłączeni do ENERGA-OPERATOR S.A., godziny stref według taryfy tego operatora; bez dystrybucji. Opłata handlowa 19,90 zł brutto za każdy rozpoczęty miesiąc (tabela 1) nie jest wliczona w cenę energii."
+    },
+    {
+      "country": "PL",
+      "currency": "PLN",
+      "osd_ids": [
+        "energa-operator"
+      ],
+      "seller": {
+        "id": "energa-obrot",
+        "name": "ENERGA-OBRÓT S.A."
+      },
+      "brand": {
+        "id": "energa",
+        "name": "Energa",
+        "aliases": [
+          "ENERGA-OBRÓT"
+        ]
+      },
+      "offer": {
+        "id": "cennik-standardowy-2026",
+        "name": "Cennik standardowy dla konsumentów od 1 lutego 2026 r."
+      },
+      "price_list": {
+        "id": "energa-obrot.cennik-standardowy-2026.g12r",
+        "revision": 1
+      },
+      "tariff_group": "G12r",
+      "schedule": {
+        "profile_id": "energa-operator.g12r.2026",
+        "timezone": "Europe/Warsaw",
+        "default_zone_id": "szczytowa",
+        "rules": [
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "13:00",
+            "end_local": "16:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          },
+          {
+            "zone_id": "pozaszczytowa",
+            "start_local": "22:00",
+            "end_local": "07:00",
+            "weekdays": null,
+            "holiday": null,
+            "season_start": null,
+            "season_end": null,
+            "dates": null,
+            "priority": 10
+          }
+        ],
+        "meter_clock_mode": "operator_choice"
+      },
+      "zones": [
+        {
+          "id": "szczytowa",
+          "label": "Szczytowa",
+          "price": "0.8764",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        },
+        {
+          "id": "pozaszczytowa",
+          "label": "Pozaszczytowa",
+          "price": "0.5685",
+          "semantic": "gross_active_energy",
+          "tax_treatment": "gross",
+          "unit": "PLN/kWh"
+        }
+      ],
+      "published_at": "2025-12-08T08:27:39+01:00",
+      "retrieved_at": "2026-11-18T13:11:09Z",
+      "verified_at": "2026-11-18T13:11:09Z",
+      "valid_from": "2026-02-01T00:00:00+01:00",
+      "valid_until": null,
+      "source_documents": [
+        "https://www.energa.pl/dam/jcr:9fc5ff24-474f-42c3-866d-d99a6ceb8aed/Cennik%20standardowy%20dla%20konsument%C3%B3w%20obowi%C4%85zuj%C4%85cy%20od%201%20lutego%202026%20roku.pdf",
+        "https://bip.ure.gov.pl/download/3/20347/EnergaOperator.pdf"
+      ],
+      "verification_state": "verified_official",
+      "declared_coverage": "Cena brutto energii czynnej dla G12r według Cennika standardowego dla konsumentów ENERGA-OBRÓT S.A. od 1 lutego 2026 r. (tabela 1, wariant 2 „G12*” – jedna cena dla G12, G12w i G12r; strefa 1 – szczytowa, strefa 2 – pozaszczytowa), odbiorcy przyłączeni do ENERGA-OPERATOR S.A., godziny stref według taryfy tego operatora; bez dystrybucji. Opłata handlowa 19,90 zł brutto za każdy rozpoczęty miesiąc (tabela 1) nie jest wliczona w cenę energii."
     },
     {
       "country": "PL",
