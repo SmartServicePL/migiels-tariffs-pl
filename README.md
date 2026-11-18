@@ -25,6 +25,9 @@ sprzedawcę dla odbiorców w sieci Stoen Operator. URE wskazuje, że na tym
 obszarze sprzedawca z urzędu jest zwolniony z obowiązku przedstawiania taryfy
 do zatwierdzenia regulatorowi. Publikowane wartości są cenami brutto energii
 czynnej i nie obejmują dystrybucji ani dodatkowych opłat.
+Dla Energa katalog zawiera też cennik standardowy ENERGA-OBRÓT dla
+konsumentów obowiązujący od 1 lutego 2026 r. (G11, G12, G12w, G12r; ceny brutto
+energii czynnej, opłata handlowa nie jest wliczona w cenę energii).
 
 Obsługiwane profile:
 
@@ -42,6 +45,7 @@ profilu innego operatora.
 Źródła oficjalne:
 
 - [Taryfa ENERGA-OBRÓT S.A. dla grup G od 1 stycznia 2026 r.](https://www.energa.pl/dam/jcr:1f730159-7aab-4815-8a17-e0f6f0a6a223/Taryfa%20ENERGA-OBR%C3%93T%20S.A.%20dla%20energii%20elektrycznej%20obowi%C4%85zuj%C4%85ca%20od%201.01.pdf)
+- [Cennik standardowy ENERGA-OBRÓT S.A. dla konsumentów od 1 lutego 2026 r.](https://www.energa.pl/dam/jcr:9fc5ff24-474f-42c3-866d-d99a6ceb8aed/Cennik%20standardowy%20dla%20konsument%C3%B3w%20obowi%C4%85zuj%C4%85cy%20od%201%20lutego%202026%20roku.pdf)
 - [Decyzje i taryfy URE opublikowane w 2025 r.](https://bip.ure.gov.pl/bip/taryfy-i-inne-decyzje-b/energia-elektryczna/4767,Taryfy-opublikowane-w-2025-r.html)
 - [Taryfa E.ON Polska dla grup G w sieci Stoen Operator od 1 stycznia 2026 r.](https://eon.pl/-/media/eon/dokumenty/dla-domu/taryfa-energii-elektrycznej-eon-polska-sa-dla-grup-taryfowych-g--obowizuje-od-dnia-01_01_2026.ashx)
 
